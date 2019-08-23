@@ -66,14 +66,14 @@ http.createServer(async function(request, response) {
         mockedResponses.delete(canonicalPath);
       }
 
-      response.writeHead(status_code, { 'Content-Type': 'application/json' });
-
       if (responseBody) {
         const stringBody = typeof responseBody === 'string' ? responseBody : JSON.stringify(responseBody);
-        log(`Sending mocked response for path: ${canonicalPath}:`, stringBody);
+        log(`Sending mocked response. status_code: ${status_code}, path: ${canonicalPath}, body:`, stringBody);
+        response.writeHead(status_code, { 'Content-Type': 'application/json' });
         response.write(stringBody);
       } else {
-        log(`Sending empty response for path: ${canonicalPath}`);
+        log(`Sending empty response. status_code: ${status_code}, path: ${canonicalPath}`);
+        response.writeHead(status_code);
       }
 
       response.end();
