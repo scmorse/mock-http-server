@@ -1,0 +1,27 @@
+{
+  "name": "mock-http-server",
+  "version": "1.0.0",
+  "description": "Mock HTTP server with docker container - register fake endpoint responses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scmorse/mock-http-server.git"
+  },
+  "keywords": [
+    "docker",
+    "http",
+    "server"
+  ],
+  "author": "Stephen Morse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scmorse/mock-http-server/issues"
+  },
+  "homepage": "https://github.com/scmorse/mock-http-server#readme",
+  "dependencies": {
+    "url-lib": "^3.0.3"
+  }
+}
